@@ -18,21 +18,12 @@
 ---
 
 ## 🧠 Abstract
-High-field Magnetic Resonance Imaging (MRI) offers superior diagnostic capabilities but is often
-constrained by high costs and infrastructure demands, whereas accessible low-field MRI frequently
-suffers from limited resolution and noise artifacts. However, existing deep learning approaches for
-synthesizing high-quality images are often hindered by a trade-off between over-smoothed tex-
-tures resulting from pixel-wise losses and structural hallucinations inherent to standard generative
-adversarial paradigms. To address these limitations, a Structurally-Informed Bidirectional Align-
-ment framework is proposed. The methodology commences with the pre-training of an auxiliary
-structural boundary extractor on the diverse fastMRI dataset to capture robust high-frequency
-anatomical cues. Upon capturing these structural priors, the frozen module is integrated into a cyclic
-domain adaptation architecture to guide synthesis on paired Human Connectome Project (HCP)
-data, thereby explicitly enforcing geometrical consistency while synthesizing realistic high-field tex-
-tures. Comprehensive evaluations demonstrate that the proposed method achieves superior perceptual
-quality, significantly reducing blur and artifacts compared to baseline methods. Quantitative assess-
-ments further confirm that the proposed approach effectively balances visual realism with anatomical
-fidelity, offering a promising solution for democratizing access to high-precision medical imaging.
+High-field Magnetic Resonance Imaging (MRI) offers superior diagnostic capabilities but is often constrained by high costs and infrastructure demands, whereas accessible low-field MRI frequently suffers from limited resolution and noise artifacts. However, existing deep learning approaches for synthesizing high-quality images are often hindered by a trade-off between over-smoothed textures resulting from pixel-wise losses and structural hallucinations inherent to standard generative adversarial paradigms.
+
+To address these limitations, we propose the **Structurally-Informed Bidirectional Alignment (SIBA)** framework. The methodology commences with the pre-training of an auxiliary structural boundary extractor on the diverse fastMRI dataset to capture robust high-frequency anatomical cues. Upon capturing these structural priors, the frozen module is integrated into a cyclic domain adaptation architecture to guide synthesis on paired Human Connectome Project (HCP) data, thereby explicitly enforcing geometrical consistency while synthesizing realistic high-field textures. 
+
+Comprehensive evaluations demonstrate that SIBA effectively balances visual realism with anatomical fidelity, achieving superior performance.
+
 ---
 
 ## ⚙️ Installation
@@ -68,7 +59,6 @@ datasets/
         ├── A/
         └── B/
 ```
-For more details on data preparation and preprocessing, please refer to our datasets/README.md.
 
 ---
 
