@@ -4,6 +4,12 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> 🚀 A deep learning framework for high-field MRI synthesis.
+
+
+![PTA-Task](framework.png)
+
+
 ---
 
 ## 📖 Table of Contents
@@ -86,8 +92,14 @@ python test.py
 ---
 
 ## 🏗 Model Architecture
-![SIBA-Model](new_framework.png) 
-The SIBA framework uses a decoupled "Structure-First, Texture-Next" approach in two stages. Stage 1 pre-trains a structural boundary extractor to capture robust anatomical edge priors, then freezes its weights to prevent gradient contamination. Stage 2 fuses the low-field input with these structural priors using a generator with a 12-layer Vision Transformer (ViT) encoder and a pyramid CNN decoder. This setup captures both global context and local details. The framework is optimized with paired supervision, adversarial, and cycle-consistency losses, ensuring realistic high-field MRI textures while maintaining strict anatomical accuracy.
+
+The SIBA framework uses a decoupled "Structure-First, Texture-Next" approach in two stages. 
+
+Stage 1 pre-trains a structural boundary extractor to capture robust anatomical edge priors, then freezes its weights to prevent gradient contamination. 
+
+Stage 2 fuses the low-field input with these structural priors using a generator with a 12-layer Vision Transformer (ViT) encoder and a pyramid CNN decoder. This setup captures both global context and local details. 
+
+The framework is optimized with paired supervision, adversarial, and cycle-consistency losses, ensuring realistic high-field MRI textures while maintaining strict anatomical accuracy.
 
 ---
 
